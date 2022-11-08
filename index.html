@@ -394,7 +394,7 @@
                 Web<span class="footer-logo-second">Studio</span>
               </p>
             </a>
-            <address>
+            <address class="footer-address">
               <ul>
                 <li class="footer-address-item">
                   <a class="footer-address" href="посилання на google map" target="_blank" rel="noopener noreferrer">м.
@@ -443,6 +443,27 @@
               </li>
             </ul>
           </div>
+          <!-- Subscription -->
+          <div class="footer-subscription">
+            <p class="footer-subscription-text">Підпишіться на розсилку</p>
+            <div class="footer-input">
+              <input
+               class="footer-input-field" 
+               type="mail" 
+               name="mail" 
+               id="inputMail"
+               placeholder="Email"
+               required>
+              <!-- <div class="footer-button-text"> -->
+                <button class="footer-input-button" type="button">
+                  <p class="footer-button-text">Підписатися</p>
+                  <svg width="24" height="24">
+                    <use href="./image/icons.svg#icon-send"></use>
+                  </svg>
+                </button>
+              <!-- </div> -->
+            </div>
+          </div>
         </div>
       </div>
     </footer>
@@ -459,8 +480,6 @@
         <!-- working area -->
         <form class="form">
           <p class="modal-title">Залиште свої дані, ми вам передзвонимо</p>
-
-          
           <label class="label" for="inputName">
             Ім'я
           </label>
@@ -504,11 +523,11 @@
           <label class="check-label">
             <input type="checkbox" class="input-check">
             <span class="modal-rules">
-              <svg width="16" height="15">
+              <svg class="check-icon" width="16" height="15">
                 <use href="./image/icons.svg#icon-check"></use>
               </svg>
             </span>
-              Погоджуюся з розсилкою та приймаю
+              &nbsp;Погоджуюся з розсилкою та приймаю &nbsp;
                <a class="input_rules" href="#">Умови договору</a>
             
           </label>

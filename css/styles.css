@@ -537,6 +537,9 @@ width: 696px;
 .footer-logo-second {
     color: #ffffff;
 }
+.footer-address {
+    width: 231px;
+}
 .footer-address-item {
     margin-bottom: 9px;
 }
@@ -571,12 +574,14 @@ width: 696px;
     margin-left: 70px;
     align-items: center;
 }
-.footer-social-text {
+.footer-social-text,
+.footer-subscription-text {
     color: #ffffff;
     font-style: bold;
     font-size: 14px;
     line-height: 1.14;
     margin-bottom: 20px;
+    text-transform: uppercase;
 }
 .footer-media-list {
     display: flex;
@@ -606,6 +611,49 @@ width: 696px;
 .footer-media-item:focus {
     background-color: #2196F3;
     color: #ffffff;
+}
+.footer-subscription { 
+    margin-left: 93px;
+    justify-content: center;
+}
+.footer-input {
+    display: flex;
+}
+.footer-input-field {
+    width: 385px;
+    height: 50px;
+    background-color: var(--accent-background-color);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.footer-input-field::placeholder {
+    padding-left: 16px;
+    font-size: 16px;
+    line-height: 1.25;
+    text-align: left;
+    vertical-align: center;
+    letter-spacing: 3%;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-input-button {
+    display: flex;
+    width: 200px;
+    height: 50px;
+    border: 0;
+    border-radius: 4px;
+    background-color: var(--accent-background-button-color);
+    color: var(--accent-text-button-color);
+    margin-left: 12px;
+    padding: 10px 28px;
+}
+.footer-button-text {
+    padding-right: 10px;
+    font-style: Bold;
+    font-size: 16px;
+    line-height: 1.88;
+    align-items: center;
+    vertical-align: center;
+    letter-spacing: 6%;
 }
 
 /* Modal */
@@ -741,6 +789,8 @@ width: 696px;
 }
 .check-label {
     position: relative;
+    display: flex;
+    align-items: center;
 }
 .modal-rules {
     display: block;
@@ -756,11 +806,26 @@ width: 696px;
 }
 .input-check {
     position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
 }
 .input_rules {
     color: var(--accent-text-color);
     text-decoration: underline;
 }
+.check-icon {
+   opacity: 0;
+}
+.input-check:checked + .check-icon {
+    opacity: 1;
+}
+.input-check:checked+.modal-rules {
+    border: 0;
+}
+.input-check:checked + .modal-rules .check-icon {
+    opacity: 1;
+} 
 .submit {
     display: flex;
     margin-top: 30px;
